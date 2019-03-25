@@ -1,0 +1,98 @@
+\documentclass{article}
+\title{Machine Learning}
+    \begin{document}
+    \maketitle
+    (E)xperience, (T)ask, (P)erformance
+    \section{Supervised Learning}
+    With supervised learning, we are given a data set and already know what our
+    correct output should look like, having the idea that there is a
+    relationship between input and output.
+    Sueprvisde learning probleams are categorized into "regression" and
+    "Classification" problems.
+    Regression - The goal of predicting a continuous valued output.
+    Classification problem - The goal to predict a discrete valued output.
+    In a regression problem, we are trying to
+    predict results within a continuous output, meaning we are trying to map
+    our inpput variables into a continuous function.
+    In a classification problem we are instead trying to predict results in a
+    discrete output.
+
+    \textbf{Example 1:}
+
+
+    Given data about houses on the market, try to predict
+    thir price. Price as a function of size is a contionuous output, thus a
+    regression problem.
+
+    This could be made into a classification problem if we made the output
+    whether the house sells for more or less than the asking price.
+
+
+    \textbf{Example 2:}
+
+
+    (a) Regression - Given a picture of a person, we have to predict their age
+    on the basis of the given picture
+
+
+    (b) Classification - Given a patient with a tumor, we have to predict
+    whether the tumor is malignant or benign.
+
+
+    \section{Unsupervised Learning}
+    Unsupervised Learning deals with a data set with no given information and
+    tries to group it into a pattern.
+    Unsupervised learning allows us to approach problems with little or no idea
+    what our results should look like. We can derive structure from data where
+    we don't necessarily know the effect of the variables.
+
+
+    \section{Model Representation}
+    m = Number of training variables.
+    x's = "input" variable / features
+    y's = output variable / target variable
+    (x, y) - one training example
+    (x\textsuperscript{i}, y\textsuperscript{i}) i\textsuperscript{th} training
+    example
+
+    training set -> learning algorithm -> h
+    \subsection{Representing the hypothesis(h)}
+    h maps from x's to y's
+
+    h$_\theta$(x) = $\theta_o$ + $\theta_1$x
+
+    shorthand h(x)
+
+    Linear resgression with one variable (univariate linear regression)
+    We will also use X to denote the space of input values, and Y to denote the
+    space of output values. In this example, X = Y = ${\rm I\!R}$\\
+
+    \section{Cost Function}
+    $\theta_i's$ are parameters.
+    How to choose $\theta_i's$?
+
+
+    Minimize $\theta_0$ $\theta_1$
+    Choose $\theta_0$ $\theta_1$ so that $h_\theta(x)$ is close to y for our
+    training examples (x, y)
+
+
+    $\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x^(i) - y^(i))^2)$
+
+    Btw...  ($\theta_0(x^(i)) = \theta_0 + \theta_1x^(i)$)
+
+
+    In english:
+    You want the sum of i to m (size of training set) of the squared
+    difference beteen prediction of the hypothesis when it is inputed the
+    (house number i) minus the actual price.
+
+
+    "We can measure the accuracy of our hypothesis function by using a cost
+    function. This takes an average difference (actually a fancier version of
+    an average) of all the results of the hypothesis with inputs from x's and
+    the actual output y's."
+
+
+
+\end{document}
